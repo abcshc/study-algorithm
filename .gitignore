@@ -10,6 +10,21 @@
 # BlueJ files
 *.ctxt
 
+# STS
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+bin/
+
+# InteliJ
+.idea
+*.iws
+*.iml
+*.ipr
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
@@ -34,6 +49,11 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
+
+## Gradle ##
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
 
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
