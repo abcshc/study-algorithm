@@ -1,4 +1,4 @@
-package study.study_algorithm2.lastman.model;
+package study.study_algorithm.game.lastman.model;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

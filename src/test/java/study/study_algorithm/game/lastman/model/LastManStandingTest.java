@@ -1,4 +1,4 @@
-package study.study_algorithm2.lastman.model;
+package study.study_algorithm.game.lastman.model;
 
 import static org.junit.Assert.assertEquals;
 

@@ -1,11 +1,9 @@
-package study.study_algorithm2.lastman.model;
+package study.study_algorithm.game.lastman.model;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import study.study_algorithm2.lastman.model.Man;
 
 public class ManTest {
 	private Man man;

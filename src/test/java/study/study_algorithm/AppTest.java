@@ -1,4 +1,4 @@
-package study.study_algorithm2;
+package study.study_algorithm;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

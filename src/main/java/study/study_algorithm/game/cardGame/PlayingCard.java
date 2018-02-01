@@ -1,4 +1,4 @@
-package study.study_algorithm2.cardGame;
+package study.study_algorithm.game.cardGame;
 
 public class PlayingCard {
 	private Suit suit;

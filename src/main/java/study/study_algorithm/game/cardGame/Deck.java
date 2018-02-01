@@ -1,4 +1,4 @@
-package study.study_algorithm2.cardGame;
+package study.study_algorithm.game.cardGame;
 
 import java.util.ArrayList;
 import java.util.Collections;
