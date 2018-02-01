@@ -1,10 +1,10 @@
 package study.study_algorithm.game.lastman.model;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 
 public class LastManStanding {
-	private static final Logger log = LoggerFactory.getLogger(LastManStanding.class);
+//	private static final Logger log = LoggerFactory.getLogger(LastManStanding.class);
 
 	private StandCircle standCircle;
 	private int interval;
@@ -22,7 +22,7 @@ public class LastManStanding {
 
 	public int result() {
 		int lastIndex = standCircle.getManInitialNumber(0);
-		log.debug("{}번째 자리에 서 있던 사람이 남았습니다.", lastIndex);
+//		log.debug("{}번째 자리에 서 있던 사람이 남았습니다.", lastIndex);
 		return lastIndex;
 	}
 }

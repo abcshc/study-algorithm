@@ -2,11 +2,11 @@ package study.study_algorithm.game.lastman.model;
 
 import java.util.ArrayList;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 
 public class StandCircle {
-	private static final Logger log = LoggerFactory.getLogger(StandCircle.class);
+//	private static final Logger log = LoggerFactory.getLogger(StandCircle.class);
 
 	private ArrayList<Man> mans = new ArrayList<Man>();
 	private int currentIndex = -1;
@@ -20,7 +20,7 @@ public class StandCircle {
 	public void goOutNextMan(int moveNumber) {
 		int nextIndex = (currentIndex + moveNumber) % mans.size();
 		currentIndex = nextIndex - 1;
-		log.debug("{}번째 사람이 나갑니다.", mans.get(nextIndex).getNumber());
+//		log.debug("{}번째 사람이 나갑니다.", mans.get(nextIndex).getNumber());
 		mans.remove(nextIndex);
 	}
 

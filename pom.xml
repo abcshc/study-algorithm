@@ -3,15 +3,17 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>study</groupId>
-	<artifactId>study-algorithm2</artifactId>
+	<artifactId>study-algorithm</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>study-algorithm2</name>
+	<name>study-algorithm</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
 	</properties>
 
 	<dependencies>
