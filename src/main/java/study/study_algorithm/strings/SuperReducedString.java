@@ -1,7 +1,7 @@
 package study.study_algorithm.strings;
 
 public class SuperReducedString {
-    public String execute(String str){
+    public String execute_(String str){
         for (int i = 1; i < str.length(); i++) {
             if (str.charAt(i) == str.charAt(i-1)) {
                 str = str.substring(0, i-1) + str.substring(i+1);
@@ -15,7 +15,7 @@ public class SuperReducedString {
         }
     }
 
-    public String execute_(String value){
+    public String execute(String value){
         String lastValue = "";
         String currentValue = value;
         boolean flag = true;
