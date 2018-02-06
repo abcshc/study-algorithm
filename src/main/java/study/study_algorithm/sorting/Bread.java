@@ -1,57 +1,64 @@
 package study.study_algorithm.sorting;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Bread {
+    public static String result;
+    public static int size;
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int size = in.nextInt();
+        size = in.nextInt();
         in.nextLine();
         String current = in.nextLine();
-        String result = in.nextLine();
-
-        result(current, result);
-    }
-
-    public static void result(String current, String result) {
-        String currentValue[] = current.split(" ");
-        ArrayList<String[]> resultList = allT(currentValue);
-
-        if (resultList.contains(result.replace(" ", ""))) {
+        result = in.nextLine();
+        LinkedList currentValue = convertInputValue(current);
+        LinkedList check = convertInputValue(result);
+        if (execute(currentValue, check)) {
             System.out.println("Possible");
         } else {
             System.out.println("Impossible");
         }
     }
 
-    public static ArrayList<String[]> allT(String[] values) {
-        ArrayList<String[]> results = new ArrayList<>();
-        results.add(values);
-        int index = 0;
-
-        for (int j = 0; j < results.size(); j++) {
-            for (int i = 1; i < values.length - 1; i++) {
-                String[] tempValue = getAndSort(results.get(index), i);
-                if (!results.contains(tempValue)) {
-                    results.add(tempValue);
-                }
-            }
-            index++;
+    public static boolean execute(LinkedList<String> values, LinkedList<String> check) {
+        for (int i = 0; i < size - 2; i++) {
+            values = moveMatchingIndex(values, check, i);
         }
-        return results;
+        if (convertOutputValue(values).equals(result))
+            return true;
+        return false;
     }
 
-    public static String[] getAndSort(String inputValue[], int index) {
-        LinkedList<String> values = new LinkedList<>(Arrays.asList(inputValue));
-        String moveValue = values.get(index + 1);
+    public static LinkedList<String> moveMatchingIndex(LinkedList<String> current, LinkedList<String> goal, int index) {
+        String goalValue = goal.get(index);
+        int currentIndex = current.indexOf(goalValue);
+        while (index != currentIndex) {
+            if (currentIndex - index == 1) {
+                current = getAndSort(current, currentIndex);
+                current = getAndSort(current, currentIndex);
+                currentIndex = currentIndex - 1;
+            } else {
+                current = getAndSort(current, currentIndex - 1);
+                currentIndex = currentIndex - 2;
+            }
+        }
+        return current;
+    }
 
+    public static LinkedList<String> getAndSort(LinkedList<String> values, int index) {
+        String moveValue = values.get(index + 1);
         values.remove(index + 1);
         values.add(index - 1, moveValue);
+        return values;
+    }
 
-        return values.toArray(inputValue);
+    public static LinkedList<String> convertInputValue(String value) {
+        return new LinkedList<>(Arrays.asList(value.split(" ")));
+    }
+
+    public static String convertOutputValue(LinkedList<String> value) {
+        return value.stream().map(e -> e.toString()).collect(Collectors.joining(" "));
     }
 }
